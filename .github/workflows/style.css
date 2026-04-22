@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  background: #0f0f0f;
+  font-family: sans-serif;
+}
+
+.galeria {
+  display: grid;
+
+  grid-auto-flow: dense;
+
+  /* 4 colunas flexíveis */
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+
+  /* altura automática das linhas */
+  grid-auto-rows: 200px;
+
+  gap: 10px;
+  padding: 10px;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Variações do mosaico */
+.grande {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.alto {
+  grid-row: span 2;
+}
+
+.largo {
+  grid-column: span 2;
+}
